@@ -35,14 +35,15 @@ export function TaskList() {
       isComplete: !task.isComplete
     } : task);
 
-    setTasks(newTasks);
+    setTasks(newTasks)
   }
 
   function handleRemoveTask(id: number) {
-    // Remove uma task da listagem pelo ID
+    // Remova uma task da listagem pelo ID
     const filteredTasks = tasks.filter(task => task.id !== id);
 
-    setTasks(filteredTasks);
+    setTasks(filteredTasks)
+
   }
 
   return (
@@ -53,7 +54,7 @@ export function TaskList() {
         <div className="input-group">
           <input
             type="text"
-            placeholder="Adicionar nova todo"
+            placeholder="Adicionar novo todo"
             onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
           />
